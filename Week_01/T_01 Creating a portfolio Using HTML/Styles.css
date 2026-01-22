@@ -328,5 +328,11 @@ main {
       width: 13vw;
       font-size: 1.1vw;
   }
+  .Nav h1{
+    font-size: 1.55vw;
+  }
+  .Nav li{
+    font-size: 1.15vw;
+  }
 
 }
