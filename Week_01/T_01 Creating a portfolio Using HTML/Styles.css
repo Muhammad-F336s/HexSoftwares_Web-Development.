@@ -1,0 +1,332 @@
+/* { Responsive breakpoints } */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #40798c;
+  height: 100vh;
+  width: 100%;
+}
+.Nav {
+  background-color: #354f52;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Nav li {
+  list-style: none;
+  margin: 0 1rem;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+.bottom-nav {
+  background-color: #354f52;
+  color: #fff;
+  padding: 0.5rem;
+  display: inline-block;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 3rem;
+  width: 100%;
+}
+.main-border {
+  background-color: #9ec5ab;
+  border: #354f52 solid 2.5px;
+  border-radius: 25px;
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.short-intro {
+  /* padding: 1rem; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2.5rem;
+}
+img {
+  max-width: 100%;
+  max-height: 40rem;
+  height: auto;
+  display: block;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+
+#field {
+  color: #354f52;
+  font-size: 1.5rem;
+  padding: 0 0.61rem;
+  font-weight: bold;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex: 1;
+  max-width: 100% !important;
+  width: 100%;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #354f52;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  line-height: 1.6;
+  padding: 0.71rem;
+}
+.lastBtns {
+  background-color: #354f52;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 1.255rem 1.75rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  margin: 1rem;
+}
+.lastBtns:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+.lastBtns a:hover {
+  transform: none;
+}
+.bottom-nav {
+  background-color: #354f52;
+  color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.bottom-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.bottom-nav-list li {
+  margin: 0 1rem 0 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+main {
+  display: flex;
+  background-color: #40798c;
+  flex: 1;
+  width: 100%;
+}
+.Container {
+  display: none;
+}
+.Image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-width: auto; /* Isse choti screen par image wrap ho jayegi */
+}
+
+/* XS */
+@media screen and (max-width: 581px) {
+  .Nav ul {
+    display: none;
+  }
+  .Nav {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 320px) {
+  .Container {
+    display: flex;
+    background-color: #9ec5ab;
+    border-radius: 25px;
+    height: auto;
+    width: 70%;
+    max-width: 100vw;
+    margin: 2.5rem auto;
+  }
+  .bottom-nav {
+    display: none;
+  }
+  .main-border {
+    flex-direction: column-reverse;
+    width: 90%;
+    border: none;
+  }
+  .short-intro {
+    line-height: normal;
+  }
+  #name {
+    font-size: 4.5vw;
+    white-space: nowrap; /* Text ko doosri line par jane se rokta hai */
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    font-weight: 700;
+  }
+  #field {
+    font-size: 3.75vw;
+  }
+  p {
+    display: block;
+    text-align: left;
+    font-size: 3vw;
+    width: 100%;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  img {
+    max-width: auto;
+    max-height: 40rem;
+    height: auto;
+    display: block;
+    border-radius: 1.25rem;
+    object-fit: cover;
+  }
+  .lastBtns{
+    width: 39vw;
+        font-size: 3.5vw;
+  }
+  #description {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 580.05px) {
+  .Nav ul {
+    display: flex;
+  }
+  .main-border {
+    flex-direction: row;
+  }
+
+  .lastBtns {
+    width: 16vw;
+    font-size: 2vw;
+    margin: 0.5rem 0;
+  }
+  #name {
+    font-size: 2.5vw;
+  }
+  #field {
+    font-size: 2vw;
+  }
+  #description {
+    font-size: 1.75vw;
+  }
+  .lastBtn2 {
+    width: auto;
+  }
+  img {
+   
+    height: 125vh;
+  }
+  .Nav h1{
+    font-size: 2.5vw;
+  }
+  .Nav li{
+    font-size: 1.75vw;
+  }
+
+  
+}
+
+/* SM */
+@media screen and (min-width: 767px) {
+  img {
+   
+    height: 100vh;
+  }
+  
+}
+/* MD */
+
+@media screen and (min-width: 992px) {
+  
+}
+/* LG */
+
+@media screen and (min-width: 1200px) {
+ img{
+  height: 125vh;
+ }
+ #name{
+  font-size: 2vw;
+ }
+ #field{
+  font-size: 1.5vw;
+ }
+ #description{
+  font-size: 1.35vw;
+ }
+ .lastBtns{
+  width: 15vw;
+  font-size: 1.35vw;
+ }
+}
+/* XL */
+
+@media screen and (min-width: 1400px) {
+  #name{
+      font-size: 1.75vw;
+  
+  }
+  #field{
+      font-size: 1.25vw;
+  }
+
+  #description{
+      font-size: 1.1vw;
+      padding-left: 5.5rem;
+  }
+
+  .lastBtns{
+      width: 13vw;
+      font-size: 1.1vw;
+  }
+
+}

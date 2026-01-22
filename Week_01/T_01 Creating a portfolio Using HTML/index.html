@@ -1,17 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week_01 | Basic Portfolio using HTML | CSS</title>
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h1>
-        <div class="Container"></div>
-    </h1>
+    <header>
+        <div class="Nav">
+            <h1><a href="#">My Portfolio</a></h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <div class="Container">
+            <div class="main-border">
+                <div class="main-content" style="max-width: 45%">
+                    <div class="short-intro">
+                        <span id="name">Hafiz Muhammad Faizan</span><br />
+                        <span id="field">Web Developer</span>
+                    </div>
+                    <p id="description">
+                        Hello! I'm Hafiz Muhammad Faizan, a passionate web developer with
+                        a knack for creating engaging and user-friendly websites. With a
+                        strong foundation in HTML, CSS, and JavaScript, I specialize in
+                        building responsive and dynamic web applications. My goal is to
+                        deliver seamless digital experiences that captivate users and
+                        drive results. Let's connect and bring your web ideas to life!
+                        <br />
+                        <br />
+                        Lets Connect!
+                    </p>
+
+                    <button class="lastBtns">
+                        <a href="https://github.com/bjcreators336" target="_blank">Github&nbsp;<i
+                                class="fa-brands fa-github"></i>
+                        </a></button><button class="lastBtns lastBtn2" onclick="copyEmail()">
+                        Contact Me&nbsp;<i class="fa-solid fa-phone"></i>
+                    </button>
+                </div>
+                <div class="Image">
+                    <img src="Pic.png" alt="Hafiz Muhammad Faizan" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="bottom-nav">
+
+
+            <ul class="bottom-nav-list">
+                <li class="btmnavlistitem">
+                    <a class="btmitemanchors" href="#home">Home</a>
+                </li>
+                <li class="btmnavlistitem">
+                    <a class="btmitemanchors" href="#about">About Me</a>
+                </li>
+                <li class="btmnavlistitem">
+                    <a class="btmitemanchors" href="#projects">Projects</a>
+                </li>
+                <li class="btmnavlistitem">
+                    <a class="btmitemanchors" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+
+        function copyEmail() {
+            // Replace 'your.email@example.com' with your actual preferred email
+            const email = "Muhammad.f336s@gmail.com";
+            navigator.clipboard.writeText(email);
+            alert("Email copied to clipboard: " + email);
+        }
+    </script>
 </body>
 
 </html>
