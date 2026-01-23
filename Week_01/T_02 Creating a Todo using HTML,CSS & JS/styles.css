@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #2d3436;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #dfe6e9;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+#add-btn {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#add-btn:hover {
+    background: #5b4cc4;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.filter-tab {
+    background: none;
+    border: none;
+    color: #636e72;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.filter-tab.active, .filter-tab:hover {
+    background: #6c5ce7;
+    color: white;
+    box-shadow: 0 4px 10px rgba(108, 92, 231, 0.2);
+}
+
+#no-tasks-msg {
+    text-align: center;
+    color: #636e72;
+    margin-top: 1rem;
+    display: none;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    background: white;
+    border-bottom: 1px solid #f1f2f6;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.todo-item:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.task-text {
+    flex: 1;
+    color: #2d3436;
+    font-size: 1rem;
+    margin-right: 15px;
+    word-break: break-word;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #b2bec3;
+}
+
+.check-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.check-btn {
+    color: #00b894;
+    margin-right: 5px;
+}
+
+.check-btn:hover {
+    background: rgba(0, 184, 148, 0.1);
+    transform: scale(1.1);
+}
+
+.delete-btn {
+    color: #ff7675;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 118, 117, 0.1);
+    transform: scale(1.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    #add-btn {
+        padding: 12px 15px;
+    }
+}
+.task-index {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #888;
+}
+
+.completed .task-index {
+    text-decoration: none; /* Index par line na aaye */
+    opacity: 0.5;
+}.todo-item.dragging {
+    opacity: 0.5;
+    background: #f0f0f0;
+    border: 2px dashed #6c5ce7;
+}
+
+/* User ko pata chale ke ye cheez pakri ja sakti hai */
+.todo-item {
+    cursor: grab;
+}
+
+.todo-item:active {
+    cursor: grabbing;
+}

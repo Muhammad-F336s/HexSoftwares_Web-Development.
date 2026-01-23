@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My Tasks</h1>
+            <p>Manage your daily goals</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="What needs to be done?" autocomplete="off">
+            <button id="add-btn">Add Task</button>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All - <span id="all-count">0</span></button>
+            <button class="filter-tab" data-filter="active">Active - <span id="active-count">0</span></button>
+            <button class="filter-tab" data-filter="completed">Completed - <span id="completed-count">0</span></button>
+        </div>
+
+        <p id="no-tasks-msg">No tasks yet</p>
+        <ul id="todo-list">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
