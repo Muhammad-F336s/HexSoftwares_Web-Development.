@@ -175,3 +175,45 @@ function reorderTasksInArray() {
   tasks = newOrder; // Memory mein array update kiya
   saveAndRender(); // LocalStorage mein save kiya aur numbers update kiye
 }
+// --- Mobile Touch Events ---
+li.addEventListener(
+  "touchstart",
+  (e) => {
+    // Sirf tab drag ho jab user index ya text par touch kare (buttons par nahi)
+    if (e.target.tagName !== "BUTTON") {
+      li.classList.add("dragging");
+    }
+  },
+  { passive: true },
+);
+
+li.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault(); // Screen scroll hone se rokne ke liye
+    const touch = e.touches[0];
+    const draggingItem = document.querySelector(".dragging");
+
+    // Touch position ke hisab se element dhoondna
+    const targetElement = document.elementFromPoint(
+      touch.clientX,
+      touch.clientY,
+    );
+    const closestLi = targetElement?.closest(".todo-item");
+
+    if (closestLi && closestLi !== draggingItem) {
+      const rect = closestLi.getBoundingClientRect();
+      const next = (touch.clientY - rect.top) / (rect.bottom - rect.top) > 0.5;
+      taskList.insertBefore(
+        draggingItem,
+        next ? closestLi.nextSibling : closestLi,
+      );
+    }
+  },
+  { passive: false },
+);
+
+li.addEventListener("touchend", () => {
+  li.classList.remove("dragging");
+  reorderTasksInArray(); // Tarteeeb save karein
+});

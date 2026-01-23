@@ -226,4 +226,51 @@ header p {
 
 .todo-item:active {
     cursor: grabbing;
+}/* Responsive Fixes */
+@media (max-width: 480px) {
+    .container {
+        padding: 1.2rem;
+        width: 95%; /* Mobile par side margins dene ke liye */
+    }
+
+    .input-group {
+        flex-direction: column; /* Input aur Button ko upar neeche karne ke liye */
+        gap: 15px;
+    }
+
+    #todo-input {
+        width: 100%; /* Full width */
+        border-radius: 12px; /* Mobile par zyada round achay nahi lagte */
+    }
+
+    #add-btn {
+        width: 100%; /* Button ko full width kar dein taake dabane mein asani ho */
+        border-radius: 12px;
+        padding: 14px;
+    }
+
+    .filter-tabs {
+        flex-wrap: wrap; /* Agar tabs zyada hon to neeche wali line mein aa jayein */
+        gap: 8px;
+    }
+
+    .filter-tab {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        flex: 1; /* Tabs ko barabar jagah dene ke liye */
+        text-align: center;
+    }
+}/* Mobile Touch Optimization */
+.todo-item {
+    touch-action: none; /* Browser ka default drag/zoom rokne ke liye */
+    user-select: none;  /* Text select hone se rokne ke liye */
+}
+
+.todo-item.dragging {
+    background: #6c5ce7;
+    color: white;
+    opacity: 0.9;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
