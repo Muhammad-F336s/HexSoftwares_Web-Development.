@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Source | A fully free | open source functional music streaming service for everyone </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <span>Sound Source</span>
+            </div>
+            
+            <nav class="nav-links">
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                    <li><a href="#"><i class="fa-solid fa-book"></i> Your Library</a></li>
+                </ul>
+            </nav>
+
+            <div class="library-section">
+                <div class="lib-header">
+                    <span>MY PLAYLISTS</span>
+                    <i class="fa-solid fa-plus" title="Create Playlist"></i>
+                </div>
+                <ul class="playlist-list">
+                    <li><a href="#">Chill Vibes 2024</a></li>
+                    <li><a href="#">Coding Focus</a></li>
+                    <li><a href="#">Gym Motivation</a></li>
+                    <li><a href="#">Late Night Jazz</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="nav-arrows">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="user-menu">
+                    <button class="upgrade-btn">Explore Premium</button>
+                    <div class="profile-icon"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </header>
+
+            <div class="content-scroll">
+                <!-- Tabs -->
+                <div class="tabs-container">
+                    <button class="tab-btn active">Featured</button>
+                    <button class="tab-btn">Liked Songs</button>
+                    <button class="tab-btn">Playlists</button>
+                    <button class="tab-btn">Albums</button>
+                </div>
+
+                <!-- Featured Section -->
+                <section class="music-grid-section">
+                    <h2>Featured Charts</h2>
+                    <div class="cards-grid">
+                        <!-- Card 1 -->
+                        <div class="music-card">
+                            <div class="card-img">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" alt="Top 50">
+                                <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h4>Top 50 Global</h4>
+                            <p>Your daily update of the most played tracks.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="music-card">
+                            <div class="card-img">
+                                <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format&fit=crop" alt="Viral">
+                                <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h4>Viral Hits</h4>
+                            <p>The songs that are trending right now.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="music-card">
+                            <div class="card-img">
+                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop" alt="Focus">
+                                <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h4>Deep Focus</h4>
+                            <p>Keep calm and focus with ambient sounds.</p>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="music-card">
+                            <div class="card-img">
+                                <img src="https://images.unsplash.com/photo-1514525253440-b393452e3383?q=80&w=1000&auto=format&fit=crop" alt="Rock">
+                                <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h4>Rock Classics</h4>
+                            <p>Rock legends & epic songs that continue to inspire.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="music-grid-section">
+                    <h2>Made For You</h2>
+                    <div class="cards-grid">
+                        <div class="music-card">
+                            <div class="card-img">
+                                <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop" alt="Mix">
+                                <button class="play-overlay"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <h4>Daily Mix 1</h4>
+                            <p>A mix of news and music made for you.</p>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Player Bar -->
+        <div class="player-bar">
+            <div class="track-info">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" alt="Cover">
+                <div class="track-text">
+                    <h4>Lost in the City</h4>
+                    <p>Cosmic Vibes</p>
+                </div>
+                <i class="fa-regular fa-heart like-icon"></i>
+            </div>
+
+            <div class="player-controls-center">
+                <div class="control-buttons">
+                    <i class="fa-solid fa-shuffle" title="Shuffle"></i>
+                    <i class="fa-solid fa-backward-step" id="prev"></i>
+                    <div class="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <i class="fa-solid fa-forward-step" id="next"></i>
+                    <i class="fa-solid fa-repeat" title="Repeat"></i>
+                </div>
+                <div class="playback-bar">
+                    <span class="current-time">0:00</span>
+                    <div class="progress-area">
+                        <div class="progress-bar"></div>
+                        <audio id="main-audio" src=""></audio>
+                    </div>
+                    <span class="total-time">3:45</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <i class="fa-solid fa-list-ul" title="Queue"></i>
+                <i class="fa-solid fa-computer" title="Connect Device"></i>
+                <div class="volume-slider-container">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="volume-slider">
+                        <div class="volume-level"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
